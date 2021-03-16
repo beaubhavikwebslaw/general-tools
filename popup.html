@@ -1,0 +1,127 @@
+<style>
+    body {
+        background: #ddd;
+    }
+
+
+    .wrap_tops {
+        position: absolute;
+        overflow: hidden;
+        top: 10%;
+        right: 10%;
+        bottom: 85px;
+        left: 10%;
+        padding: 20px 50px;
+        display: block;
+        border-radius: 4px;
+        transform: translateY(20px);
+        transition: all 0.5s;
+        visibility: hidden;
+    }
+    .wrap_tops .content_tops {
+        opacity: 0;
+    }
+    .wrap_tops:before {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        background: white;
+        content: "";
+        bottom: 10px;
+        left: 50%;
+        top: 95%;
+        color: #fff;
+        border-radius: 50%;
+        -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    .wrap_tops.active {
+        display: block;
+        visibility: visible;
+        box-shadow: 2px 3px 16px silver;
+        transition: all 600ms;
+        transform: translateY(0px);
+        transition: all 0.5s;
+    }
+    .wrap_tops.active:before {
+        height: 2000px;
+        width: 2000px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        margin-left: -1000px;
+        margin-top: -1000px;
+        display: block;
+        -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    .wrap_tops.active .content_tops {
+        position: relative;
+        z-index: 1;
+        opacity: 1;
+        transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+        .myclsnew{
+/*            padding: 11px 11px 13px 13px;
+            outline: none;
+            border-radius: 50%;
+            background: #007fed;
+            color: #fff;
+            font-size: 24px;
+            display: block;
+            position: fixed;
+            left: 50%;
+            bottom: 20px;
+            top: auto;
+            margin-left: -25px;*/
+            transition: transform 0.25s;
+        }
+
+/*    .myclsnew {
+         padding: 11px 11px 13px 13px; 
+         outline: none; 
+         border-radius: 50%; 
+         background: #007fed; 
+         color: #fff; 
+        font-size: 24px;
+        display: block;
+        position: fixed;
+         left: 50%; 
+         bottom: 20px; 
+         top: auto; 
+         margin-left: -25px; 
+        transition: transform 0.25s;
+    }*/
+    .myclsnew :hover {
+        text-decoration: none;
+        background: #2198ff;
+    }
+    .myclsnew .active {
+        transform: rotate(135deg);
+        transition: transform 0.5s;
+    }
+
+
+</style>
+<script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous"></script>
+
+
+<div class='wrap_tops'>
+    <div class='content_tops'>
+        <h2>Welcome Popup</h2>
+        <p>how are you all</p>
+
+    </div>
+</div>
+<a class='myclsnew' href='#'>click here</a>
+
+<script>
+    $('.myclsnew').on('click', function () {
+        $('.wrap_tops, a').toggleClass('active');
+        return false;
+    });
+</script>
