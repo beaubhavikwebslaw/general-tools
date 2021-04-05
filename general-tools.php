@@ -22,6 +22,8 @@ require_once( TOOLS_PLUGIN_PATH . 'modules/admin-settings.php' );
 
 register_activation_hook(__FILE__, 'beau_plugin_activation');
 
+// beau code with gihub
+
 //Plugin Admin notice = START
 
 //add_action('admin_init', 'smdb_on_plugins_loaded', 10);
@@ -74,10 +76,11 @@ function bk_add_menu_page() {
 //    add_submenu_page('my-menu', 'Submenu Page Title2', 'Whatever You Want2', 'manage_options', 'my-menu2');
 }
 
-function general_tools_fun() { 
-    require_once( TOOLS_PLUGIN_PATH . 'materials/assets-include.php' );    
-    require_once( TOOLS_PLUGIN_PATH . 'view/grid.php' );    
+function general_tools_fun() {
+    require_once( TOOLS_PLUGIN_PATH . 'materials/assets-include.php' );
+    require_once( TOOLS_PLUGIN_PATH . 'view/grid.php' );
 //    echo BEAU_SITE_URL; exit;
+    
   ?>
 
 
